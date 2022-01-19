@@ -9,9 +9,9 @@ resource "aws_elastic_beanstalk_environment" "tfenvtest" {
   name                = "tf-test-name"
   application         = aws_elastic_beanstalk_application.tftest.name
   solution_stack_name = "64bit Amazon Linux 2 v3.3.9 running Python 3.8"
-}
- setting {
+  setting {
       namespace = "aws:autoscaling:launchconfiguration"
       name = "IamInstanceProfile"
       value = "demo-Role"
   }
+}
